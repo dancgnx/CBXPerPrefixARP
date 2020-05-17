@@ -92,7 +92,7 @@ if __name__ == "__main__":
         # we only care about spoke sites as hub sites don't do NAT
         if site["element_cluster_role"] == "SPOKE":
             # check if site belong to the site list
-            if args["list"] or args["scope_all"] or site["name"] in site_list:
+            if args["list"] or args["all"] or site["name"] in site_list:
                 sites[site["id"]] = site["name"]
     if args["list"]:
         listPerPrefixARP(cgx,args,sites)
